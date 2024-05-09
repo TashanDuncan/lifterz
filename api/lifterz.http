@@ -1,0 +1,49 @@
+### Find All Lifts
+GET  localhost:8080/api/lifts
+
+### Find Lift By Id
+GET  localhost:8080/api/lifts/2
+
+### Find Lift By ID that does not exist
+GET  localhost:8080/api/lifts/100
+
+### Create a new Lift
+POST localhost:8080/api/lifts
+Content-Type: application/json
+
+{
+  "id": 11,
+  "exercise": "BENCH_PRESS",
+  "reps": 5,
+  "weight": 100,
+  "date": "2021-06-01",
+  "RPE": 7
+}
+
+### Create a new Lift with missing required field (weight)
+POST localhost:8080/api/lifts
+Content-Type: application/json
+
+{
+  "id": 11,
+  "exercise": "BENCH_PRESS",
+  "reps": 5,
+  "date": "2021-06-01",
+  "RPE": 7
+}
+
+### Update a Lift
+PUT localhost:8080/api/lifts/11
+Content-Type: application/json
+
+{
+  "id": 11,
+  "exercise": "SQUAT",
+  "reps": 3,
+  "weight": 120,
+  "date": "2021-06-01",
+  "RPE": 7
+}
+
+### Delete a Lift
+DELETE localhost:8080/api/lifts/11
